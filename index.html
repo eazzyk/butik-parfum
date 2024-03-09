@@ -1,0 +1,770 @@
+<promhtml>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+    /* body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+      } */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    button {
+      display: block;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      font-family: 'Montserrat', sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    span {
+      display: block;
+    }
+    a {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .container {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media screen and (min-width: 480px) {
+      .container {
+        width: 480px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .container {
+        width: 768px;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      .container {
+        width: 1024px;
+      }
+    }
+    .header__block {
+      display: flex;
+
+      background-color: #f5f5f5;
+      border-bottom: 2px solid #db9969;
+    }
+    .header__content--box {
+      display: flex;
+      align-items: center;
+    }
+    .header__logo {
+      display: block;
+      margin-right: auto;
+    }
+    .header__contacts {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      gap: 9px;
+      margin-left: 44px;
+      margin-right: 10px;
+    }
+    .header__viber,
+    .header__whatsapp {
+      text-decoration: none;
+      font-style: normal;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 200ms ease-out;
+    }
+    .header__viber:hover,
+    .header__viber:focus,
+    .header__whatsapp:hover,
+    .header__whatsapp:focus {
+      color: #db9969;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      background: #f1f1f1;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url('http://internetsolution.com.ua/Pictures/beautylend/beautylend1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-top: 164px;
+      padding-bottom: 184px;
+    }
+    .hero__main--content {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.7) 15%,
+        rgba(236, 237, 237, 1) 30%,
+        rgba(255, 255, 255, 0.7) 80%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      padding: 60px 40px 60px;
+      text-align: center;
+    }
+    .hero__header {
+      font-size: 42px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero__header--2 {
+      margin: 0;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .hero__delivery {
+      font-size: 18px;
+      margin-top: 32px;
+    }
+    .hero__btn {
+      width: 233px;
+      height: 64px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 46px;
+      border-radius: 6px;
+      background: #db9969;
+      font-size: 32px;
+      font-family: 'Montserrat', sans-serif;
+      color: rgba(0, 0, 0, 0.603);
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 200ms ease-out;
+    }
+    .hero__btn:focus,
+    .hero__btn:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #db9969;
+      background-color: wheat;
+    }
+
+    .benefits__block {
+      display: flex;
+      padding-top: 80px;
+      padding-bottom: 120px;
+
+      background-color: #f1f1f1;
+    }
+    .benefits__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: start;
+      gap: 46px;
+    }
+    .benefits__item {
+      flex-basis: calc((100% - 46px) / 2);
+
+      gap: 14px;
+      display: flex;
+      align-items: center;
+    }
+    .benefits__descr {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 10px;
+      text-decoration: none !important;
+    }
+    .benefits__btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 64px;
+      border-radius: 6px;
+      background: #db9969;
+      font-size: 32px;
+
+      padding: 8px 28px;
+      text-align: center;
+
+      color: rgba(0, 0, 0, 0.603);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 200ms ease-out;
+    }
+    .benefits__btn:focus,
+    .benefits__btn:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #db9969;
+      background-color: wheat;
+    }
+    .purchase__block {
+      padding-top: 100px;
+      padding-bottom: 120px;
+      display: flex;
+      background-color: rgb(255, 251, 251);
+    }
+    .purchase__header {
+      font-size: 28px;
+      margin: 0;
+      text-align: center;
+    }
+    .purchase__list {
+      margin-top: 86px;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+    .purchase__item {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 18px;
+    }
+    .purchase__btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 94px;
+      border-radius: 6px;
+      background: #db9969;
+      font-size: 32px;
+
+      padding: 8px 28px;
+      text-align: center;
+
+      color: rgba(0, 0, 0, 0.603);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 200ms ease-out;
+    }
+    .purchase__btn:focus,
+    .purchase__btn:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #db9969;
+      background-color: wheat;
+    }
+    .questions__block {
+      padding-top: 100px;
+      padding-bottom: 120px;
+      display: flex;
+      background-color: #f1f1f1;
+    }
+    .questions__header {
+      font-size: 28px;
+      margin: 0;
+      text-align: center;
+    }
+    .questions__list {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .questions__item {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 20px;
+    }
+    .questions__answer {
+      margin-left: 24px;
+      font-size: 20px;
+    }
+    .feedback__form--box {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 120px;
+      width: 360px;
+      padding: 50px;
+      outline: 2px solid #db9969;
+      border-radius: 4px;
+    }
+    .feedback__form {
+      width: 100%;
+    }
+    .feedback__form--header {
+      font-size: 24px;
+    }
+    .feedback__form--info {
+      font-size: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .feedback__form--btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 24px;
+      border-radius: 6px;
+      background: #db9969;
+      font-size: 32px;
+
+      padding: 8px 28px;
+      text-align: center;
+
+      color: rgba(0, 0, 0, 0.603);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 200ms ease-out;
+    }
+    .feedback__form--btn:focus,
+    .feedback__form--btn:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #db9969;
+      background-color: wheat;
+    }
+    .feedback__form--input {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+      border-radius: 4px;
+
+      margin-bottom: 20px;
+
+      padding-left: 15px;
+      width: 100%;
+      height: 50px;
+      outline: none;
+      transition: all 200ms ease-out;
+      background: #fff;
+      color: #db9969;
+    }
+    .feedback__form--input:hover,
+    .feedback__form--input:focus {
+      border: 1px solid #db9969;
+    }
+    .footer__block {
+      background-color: rgb(232, 223, 216);
+      display: flex;
+      padding-top: 40px;
+      padding-bottom: 80px;
+      border-top: 2px solid #db9969;
+    }
+    .footer__content--box {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+    }
+    .footer__logo {
+      display: block;
+    }
+    .footer__contacts {
+      display: flex;
+      gap: 60px;
+      align-items: center;
+      margin-left: auto;
+    }
+    .adress__link {
+      display: flex;
+      align-items: center;
+      outline: none;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+      font-style: normal;
+      max-width: 260px;
+    }
+    .footer__tel-email {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer__tel {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      font-style: normal;
+    }
+    .footer__email {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      font-style: normal;
+    }
+  </style>
+  <header>
+    <section class="header__block">
+      <div class="header__content--box container">
+        <a class="header__logo" href="">
+          <img
+            src="https://butikparfum.com.ua/content/images/2/200x100l90nn0/91016615232796.webp"
+            alt="Лого"
+          />
+        </a>
+        <a class="header__basket" href="">
+          <img
+            width="24px"
+            height="24px"
+            src="https://cdn-icons-png.flaticon.com/256/481/481384.png"
+            alt="Кошик"
+          />
+        </a>
+        <div class="header__contacts">
+          <a class="header__viber" href="tel:+380683332222">
+            <img
+              width="22px"
+              height="22px"
+              src="https://icon-library.com/images/viber-icon-png/viber-icon-png-13.jpg"
+              alt="Телефон"
+            />
+            +38 068 333 2222
+          </a>
+          <a class="header__whatsapp" href="tel:+380681112222">
+            <img
+              width="24px"
+              height="24px"
+              src="https://icon-library.com/images/icon-whatsapp/icon-whatsapp-8.jpg"
+              alt="WhatsApp"
+            />
+            +38 068 111 2222
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__content--box container">
+        <div class="hero__main--content">
+          <h1 class="hero__header">Nina Ricci духи оригінал</h1>
+          <h2 class="hero__header--2">
+            подарують вам відчуття унікальності, ексклюзивності та розкоші!
+            Огорніть себе неповторним ароматом парфумованої води Nina Ricci!
+            Оригінал від компанії «Бутік Парфум»!
+          </h2>
+          <p class="hero__delivery">
+            Миттєве підтвердження замовлень через Viber, WhatsApp! Безкоштовна
+            доставка по Україні, за умови повної передоплати на картку!
+          </p>
+        </div>
+        <button class="hero__btn">Замовити</button>
+      </div>
+    </section>
+    <section class="benefits__block">
+      <div class="container">
+        <ul class="benefits__list">
+          <li class="benefits__item">
+            <span href="">
+              <img
+                width="64px"
+                height="64px"
+                src="https://cdn-icons-png.flaticon.com/256/2047/2047460.png"
+                alt="Флакони"
+              />
+            </span>
+            <p class="benefits__descr">
+              <b>Широкий спектр вибору.</b> У нашому каталозі представлені
+              оригінали популярних парфумів у дуже великій різноманітності.
+              Більше 20 позицій від бренду <strong>Nina Ricci</strong>,
+              бестселери парфумованої води від Lancome (Ланком) та багато інших
+              ароматів на будь-який смак. Кожен покупець зможе зробити вибір для
+              себе чи на подарунок.
+            </p>
+          </li>
+          <li class="benefits__item">
+            <span href="">
+              <img
+                width="64px"
+                height="64px"
+                src="https://cdn-icons-png.flaticon.com/512/3500/3500954.png"
+                alt="Якість"
+              />
+            </span>
+            <p class="benefits__descr">
+              <b>Бездоганна якість.</b> Наша компанія співпрацює виключно з
+              офіційними дистриб’юторами та перевіреними партнерами, та гарантує
+              високу якість парфумованої продукції. Купуючи у нас
+              <strong>Nina Ricci духи</strong>, ви можете бути впевнені в тому,
+              що отримуєте 100% сертифікований оригінал.
+            </p>
+          </li>
+          <li class="benefits__item">
+            <span href="">
+              <img
+                width="64px"
+                height="64px"
+                src="https://cdn-icons-png.flaticon.com/512/5619/5619363.png"
+                alt="Ціна"
+              />
+            </span>
+            <p class="benefits__descr">
+              <b>Оптимальні ціни.</b> Завдяки прямій співпраці з
+              дистриб’юторами, продажам через інтернет та відсутності
+              посередників на всіх етапах роботи, ціна на
+              <strong>духи Ніна Річчі</strong>
+              максимально доступна та прийнятна для покупців. Цінова політика
+              компанії лояльна, без посередницьких переплат та комісій.
+            </p>
+          </li>
+          <li class="benefits__item">
+            <span href="">
+              <img
+                width="64px"
+                height="64px"
+                src="https://smartcasinoguide.com/app/uploads/2022/12/bonus-buy-logo.png"
+                alt="Бонуси"
+              />
+            </span>
+            <p class="benefits__descr">
+              <b>Приємні бонуси.</b> На сайті представлено багато акційних
+              позицій на <strong>Nina Ricci духи</strong> та інші парфуми. Для
+              наших постійних клієнтів ми розробили накопичувальну систему
+              знижок, розмір знижки залежить від суми замовлень. Також у нас діє
+              дисконтна програма для зареєстрованих покупців.
+            </p>
+          </li>
+          <li class="benefits__item">
+            <span href="">
+              <img
+                width="64px"
+                height="64px"
+                src="https://cdn-icons-png.flaticon.com/256/6070/6070926.png"
+                alt="Консультації"
+              />
+            </span>
+            <p class="benefits__descr">
+              <b>Консультації фахівців.</b> Якщо вам потрібна консультація
+              фахівця та допомога у виборі, замовте зворотний дзвінок або
+              напишіть у месенджери, і ми зв’яжемося з Вами. Менеджер відповість
+              на всі запитання та допоможе вибрати бестселери парфумованої води
+              від Britney Spears (Брітні Спірс) або від інших брендів.
+            </p>
+          </li>
+          <li class="benefits__item">
+            <span href="">
+              <img
+                width="64px"
+                height="64px"
+                src="https://cdn-icons-png.flaticon.com/512/6750/6750029.png"
+                alt="Зручність"
+              />
+            </span>
+
+            <p class="benefits__descr">
+              <b>Зручне оформлення.</b> Інтерфейс нашого сайту - зрозумілий та
+              зручний. Ви можете зайти на сайт через смартфон, комп’ютер або
+              планшет, вибрати зручну для вас мову - українську або російську,
+              скористатися пошуком, фільтрами та підібрати
+              <strong>Ніна Річчі духи</strong> або інші парфумерні композиції.
+            </p>
+          </li>
+        </ul>
+        <button class="benefits__btn">Асортимент</button>
+      </div>
+    </section>
+    <section class="purchase__block">
+      <div class="purchase__content--box container">
+        <h2 class="purchase__header">
+          Як купити духи Nina Ricci в інтернет-магазині «Бутік Парфум»
+        </h2>
+        <ul class="purchase__list">
+          <li class="purchase__item">
+            <span href="">
+              <img
+                width="48px"
+                height="48px"
+                src="https://cdn-icons-png.flaticon.com/128/9770/9770783.png"
+                alt="Перший крок"
+              />
+            </span>
+            <p>
+              <b>Оформити замовлення.</b> Зробіть замовлення зручним способом –
+              через кошик сайту, або напишіть на Viber, WhatsApp.
+            </p>
+          </li>
+          <li class="purchase__item">
+            <span href="">
+              <img
+                width="48px"
+                height="48px"
+                src="https://cdn-icons-png.flaticon.com/128/9770/9770819.png"
+                alt="Другий крок"
+              />
+            </span>
+            <p>
+              <b>Погодити деталі.</b> Менеджер миттєво обробляє замовлення та
+              зв’язується з покупцем через месенджери для уточнення та
+              узгодження деталей.
+            </p>
+          </li>
+          <li class="purchase__item">
+            <span href="">
+              <img
+                width="48px"
+                height="48px"
+                src="https://cdn-icons-png.flaticon.com/128/9770/9770853.png"
+                alt="Третій крок"
+              />
+            </span>
+            <p>
+              <b>Вибрати метод оплати.</b> Доступні форми оплати - переказ суми
+              на банківську картку, післяплата з мінімальною передоплатою 200
+              грн.
+            </p>
+          </li>
+          <li class="purchase__item">
+            <span href="">
+              <img
+                width="48px"
+                height="48px"
+                src="https://cdn-icons-png.flaticon.com/128/9770/9770887.png"
+                alt="Четвертий крок"
+              />
+            </span>
+            <p>
+              <b>Отримати доставку.</b>
+              <strong>Nina Ricci духи оригінал</strong> будуть відправлені по
+              всій Україні через Нову пошту або Укрпошту. Отримайте замовлення у
+              відділенні та користуйтеся із задоволенням.
+            </p>
+          </li>
+        </ul>
+        <button class="purchase__btn">До кошика</button>
+      </div>
+    </section>
+    <section class="questions__block">
+      <div class="questions__content--box container">
+        <h2 class="questions__header">Питання, що часто ставляться</h2>
+        <ul class="questions__list">
+          <li class="questions__item">
+            <p>Які парфуми від Nina Ricci найбільш популярні серед клієнтів?</p>
+            <p class="questions__answer">
+              <b>
+                — Nina Ricci відома своєю колекцією найпопулярніших парфумів,
+                серед яких є аромати, які завжди в ціні.</b
+              >
+            </p>
+          </li>
+          <li class="questions__item">
+            <p>
+              Які характеристики роблять аромати Nina Ricci особливими та
+              унікальними?
+            </p>
+            <p class="questions__answer">
+              <b
+                >— Духи Nina Ricci відрізняються вишуканістю та жіночністю. Вони
+                мають неповторний характер та елегантний аромат.</b
+              >
+            </p>
+          </li>
+          <li class="questions__item">
+            <p>Які парфуми від Nina Ricci найбільш популярні серед клієнтів?</p>
+            <p class="questions__answer">
+              <b>
+                — Nina Ricci відома своєю колекцією найпопулярніших парфумів,
+                серед яких є аромати, які завжди в ціні.</b
+              >
+            </p>
+          </li>
+          <li class="questions__item">
+            <p>Які парфуми від Nina Ricci найбільш популярні серед клієнтів?</p>
+            <p class="questions__answer">
+              <b>
+                — Nina Ricci відома своєю колекцією найпопулярніших парфумів,
+                серед яких є аромати, які завжди в ціні.</b
+              >
+            </p>
+          </li>
+        </ul>
+        <div class="feedback__form--box">
+          <h3 class="feedback__form--header">Залишились питання?</h3>
+          <p class="feedback__form--info">
+            Вкажіть Ваше ім’я й телефон. Наші менеджери зв’яжуться з Вами та
+            нададуть усю інформацію, яка Вас цікавить
+          </p>
+          <form class="feedback__form">
+            <label for="feedback__name"></label>
+            <input
+              class="feedback__form--input"
+              type="text"
+              name="feedback__form"
+              id="feedback__name"
+              placeholder="Ім’я"
+              required
+            />
+            <label for="feedback__email"></label>
+            <input
+              class="feedback__form--input"
+              type="tel"
+              name="feedback__form"
+              id="feedback__email"
+              placeholder="Номер телефону"
+              required
+            />
+            <button class="feedback__form--btn" type="submit">
+              Відправити
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer__block">
+      <div class="footer__content--box container">
+        <div class="footer__cont--1">
+          <a class="footer__logo" href="">
+            <img
+              src="https://butikparfum.com.ua/content/images/2/200x100l90nn0/91016615232796.webp"
+              alt="Лого"
+          /></a>
+
+          <p class="copyright__content">
+            &copy; 2014 — 2024 - інтернет-магазин «Бутік Парфум»
+          </p>
+        </div>
+
+        <div class="footer__contacts">
+          <div class="footer__tel-email">
+            <a class="footer__tel" href="tel:+380933470119">
+              <span href="">
+                <img
+                  width="24px"
+                  height="24px"
+                  src="https://cdn-icons-png.flaticon.com/256/126/126341.png"
+                  alt="Телефон"
+                /> </span
+              >(093) 347-01-19</a
+            >
+            <a class="footer__email" href="mailto:butikpf@ukr.net">
+              <span href="">
+                <img
+                  width="24px"
+                  height="24px"
+                  src="https://cdn-icons-png.flaticon.com/512/561/561188.png"
+                  alt="Пошта"
+                /> </span
+              >butikpf@ukr.net</a
+            >
+          </div>
+          <address>
+            <a
+              class="adress__link"
+              href="https://maps.app.goo.gl/1HpS7vkruwU4fefx5"
+            >
+              <span href="">
+                <img
+                  width="24px"
+                  height="24px"
+                  src="https://cdn-icons-png.freepik.com/256/3177/3177361.png"
+                  alt="Локація"
+                />
+              </span>
+              Київ, вул. Драгомирова, 2-А, 01103 Харків, вулиця Академіка
+              Павлова, 120, 61054</a
+            >
+          </address>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- і т.д. -->
+</promhtml>
